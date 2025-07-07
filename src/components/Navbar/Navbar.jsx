@@ -8,7 +8,7 @@ import toggle_light from "../../assets/night.png";
 import toggle_dark from "../../assets/day.png";
 
 
-function Navbar() {
+function Navbar({theme, setTheme}) {
   return (
     <div className='navbar'>
       <img src={logo_light} alt='' className='logo' />

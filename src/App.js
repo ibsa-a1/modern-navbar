@@ -4,11 +4,11 @@ import react, { useState } from "react";
 
 function App() {
 
-  const [theme, seTheme] = useState('light')
+  const [theme, setTheme] = useState('light')
 
   return (
     <div className="container">
-      <Navbar />
+      <Navbar theme={theme} setTheme={setTheme}/>
     </div>
   );
 }
