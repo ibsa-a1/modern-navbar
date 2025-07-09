@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Navbar.css'
 import logo_light from '../../assets/logo-black.png'
 import logo_dark from "../../assets/logo-white.png";
@@ -6,6 +6,10 @@ import search_icon_light from "../../assets/search-w.png";
 import search_icon_dark from "../../assets/search-b.png";
 import toggle_light from "../../assets/night.png";
 import toggle_dark from "../../assets/day.png";
+import menu_light from '../../assets/menu-light.jpg'; 
+import menu_dark from '../../assets/menu-dark.jpg';   
+import close_light from '../../assets/close-light.jpg'; 
+import close_dark from '../../assets/close-dark.jpg';   
 
 
 function Navbar({theme, setTheme}) {
