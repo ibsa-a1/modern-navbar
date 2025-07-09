@@ -151,6 +151,9 @@
   .logo {
     width: 100px;
   }
+  .search-box {
+    display: none;
+  }
   .toggle-icon {
     margin-left: 10px;
   }
