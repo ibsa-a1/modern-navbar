@@ -38,7 +38,7 @@ function Navbar({theme, setTheme}) {
         onClick={toggleMobileMenu}
       />
 
-      <ul>
+      <ul className={mobileMenuOpen ? 'show-mobile-menu' : ''}> 
         <li>Home</li>
         <li>Products</li>
         <li>Features</li>

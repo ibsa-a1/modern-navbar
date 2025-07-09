@@ -6,21 +6,29 @@
   background: #fff;
   padding: 15px 7%;
   transition: 0.5s;
+  position: relative;
+  z-index: 100;
 }
 .logo {
   width: 160px;
   cursor: pointer;
 }
-ul {
+.navbar ul {
   flex: 1;
   list-style: none;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
-li {
+.navbar ul li {
   display: inline-block;
   margin: 10px 20px;
   font-size: 18px;
   cursor: pointer;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
 }
 .toggle-icon {
   width: 50px;
@@ -66,9 +74,87 @@ li {
 .dark .search-box input::placeholder {
   color: #222;
 }
+
 .menu-icon {
-  display: none; /* Hidden by default on large screens */
-  width: 50px; /* Set size similar to toggle-icon */
+  display: none;
+  width: 50px;
   cursor: pointer;
-  margin-left: 20px; /* Adjust margin as needed */
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 5%;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    z-index: 90;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar ul li {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar ul.show-mobile-menu {
+    display: flex;
+  }
+  .dark .navbar ul {
+    background: #000;
+  }
+  .dark .navbar ul li {
+    color: #fff;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .search-box {
+    padding: 8px 15px;
+  }
+
+  .search-box input {
+    max-width: 120px;
+    font-size: 16px;
+  }
+
+  .toggle-icon {
+    width: 40px;
+    margin-left: 20px;
+  }
+
+  .menu-icon {
+    display: block;
+    width: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 100px;
+  }
+  .toggle-icon {
+    margin-left: 10px;
+  }
+  .menu-icon {
+    width: 35px;
+  }
 }
