@@ -66,3 +66,9 @@ li {
 .dark .search-box input::placeholder {
   color: #222;
 }
+.menu-icon {
+  display: none; /* Hidden by default on large screens */
+  width: 50px; /* Set size similar to toggle-icon */
+  cursor: pointer;
+  margin-left: 20px; /* Adjust margin as needed */
+}
